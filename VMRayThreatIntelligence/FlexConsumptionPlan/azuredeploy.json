@@ -10,8 +10,13 @@
         },
         "VmrayBaseURL": {
             "type": "string",
-            "defaultValue": "https://us.cloud.vmray.com",
-            "minLength": 1
+	    "allowedValues": [
+                "https://us.cloud.vmray.com",
+                "https://eu.cloud.vmray.com",
+	    ],
+		"defaultValue": "https://us.cloud.vmray.com",
+            "metadata": {
+                "description": "Choose US or EU Cloud"
         },
         "VmrayAPIKey": {
             "type": "securestring",
@@ -70,7 +75,7 @@
                 "description": "Enter Azure Tenant Id of your Azure Active Directory."
             }
         },
-        "AzureWorkspacseID": {
+        "AzureWorkspaceID": {
             "type": "string",
             "minLength": 1,
             "metadata": {
@@ -86,7 +91,7 @@
     },
   "variables": {
     "FunctionName": "[concat(toLower(parameters('FunctionName')), take(uniqueString(resourceGroup().id), 3))]",
-    "StorageAccount": "[concat('vmrayTI', take(uniqueString(resourceGroup().id), 3))]",
+    "StorageAccount": "[concat('vmrayti', take(uniqueString(resourceGroup().id), 3))]",
     "storageRoleDefinitionId": "b7e6dc6d-f1e8-4753-8033-0f276bb0955b",
     "deploymentStorageContainerName": "vmraystoragecontainer",
     "StorageSuffix": "[environment().suffixes.storage]",
