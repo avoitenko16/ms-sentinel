@@ -244,8 +244,8 @@
               "value": "[parameters('AzureTenantID')]"
             },
             {
-              "name": "AzureWorkspacseID",
-              "value": "[parameters('AzureWorkspacseID')]"
+              "name": "AzureWorkspaceID",
+              "value": "[parameters('AzureWorkspaceID')]"
             },
             {
               "name": "Polling",
