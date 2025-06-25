@@ -2,28 +2,28 @@
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
-        "FunctionName": {
-            "defaultValue": "vmrayfeed",
-            "minLength": 1,
-            "maxLength": 20,
-            "type": "string"
-        },
-        "VmrayBaseURL": {
-            "type": "string",
-	    "allowedValues": [
-                "https://us.cloud.vmray.com",
-                "https://eu.cloud.vmray.com"
-	    ],
-		"defaultValue": "https://us.cloud.vmray.com",
-            "metadata": {
-                "description": "Choose US or EU Cloud"
-	    }
-        },
-        "VmrayAPIKey": {
-            "type": "securestring",
-            "defaultValue": "<VMRay API Key>",
-            "minLength": 1
-        },
+       "FunctionName": {
+  "defaultValue": "vmrayfeed",
+  "minLength": 1,
+  "maxLength": 20,
+  "type": "string"
+},
+"VmrayBaseURL": {
+  "type": "string",
+  "allowedValues": [
+    "https://us.cloud.vmray.com",
+    "https://eu.cloud.vmray.com"
+  ],
+  "defaultValue": "https://us.cloud.vmray.com",
+  "metadata": {
+    "description": "Choose US or EU Cloud"
+  }
+},
+"VmrayAPIKey": {
+  "type": "securestring",
+  "defaultValue": "<VMRay API Key>",
+  "minLength": 1
+},
         "VmraySampleVerdict": {
             "type": "string",
             "allowedValues": [
