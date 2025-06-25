@@ -12,11 +12,12 @@
             "type": "string",
 	    "allowedValues": [
                 "https://us.cloud.vmray.com",
-                "https://eu.cloud.vmray.com",
+                "https://eu.cloud.vmray.com"
 	    ],
 		"defaultValue": "https://us.cloud.vmray.com",
             "metadata": {
                 "description": "Choose US or EU Cloud"
+	    }
         },
         "VmrayAPIKey": {
             "type": "securestring",
